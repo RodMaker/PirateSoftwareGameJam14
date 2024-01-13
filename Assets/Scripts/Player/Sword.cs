@@ -37,6 +37,7 @@ public class Sword : MonoBehaviour, IWeapon
 
     public void Attack()
     {
+        SoundManager.Instance.PlaySound3D("Sword", transform.position);
         myAnimator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
         slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);

@@ -48,6 +48,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
             return;
         }
 
+        SoundManager.Instance.PlaySound3D("PlayerTakeDamage", transform.position);
         ScreenShakeManager.Instance.ShakeScreen();
         knockback.GetKnockedBack(hitTransform, knockBackThrustAmount);
         StartCoroutine(flash.FlashRoutine());

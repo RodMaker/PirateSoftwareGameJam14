@@ -19,6 +19,7 @@ public class Bow : MonoBehaviour, IWeapon
 
     public void Attack()
     {
+        SoundManager.Instance.PlaySound3D("Bow", transform.position);
         myAnimator.SetTrigger(FIRE_HASH);
         GameObject newArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, ActiveWeapon.Instance.transform.rotation);
         newArrow.GetComponent<Projectile>().UpdateProjectileRange(weaponInfo.weaponRange);

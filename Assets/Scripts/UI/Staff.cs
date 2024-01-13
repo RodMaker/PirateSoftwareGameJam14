@@ -24,6 +24,7 @@ public class Staff : MonoBehaviour, IWeapon
 
     public void Attack()
     {
+        SoundManager.Instance.PlaySound3D("Staff", transform.position);
         myAnimator.SetTrigger(ATTACK_HASH);
     }
 

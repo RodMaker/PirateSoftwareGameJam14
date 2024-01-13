@@ -32,6 +32,8 @@ public class ActiveInventory : MonoBehaviour
 
     private void ToggleActiveHighlight(int indexNum)
     {
+        SoundManager.Instance.PlaySound2D("Toggle");
+
         activeSlotIndexNum = indexNum;
 
         foreach (Transform inventorySlot in this.transform)
