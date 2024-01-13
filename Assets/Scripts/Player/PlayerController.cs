@@ -49,11 +49,17 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Update()
     {
+        if (DialogueManager.isActive == true)
+            return;
+
         PlayerInput();
     }
 
     private void FixedUpdate()
     {
+        if (DialogueManager.isActive == true)
+            return;
+
         AdjustPlayerFacingDirection();
         Move();
     }

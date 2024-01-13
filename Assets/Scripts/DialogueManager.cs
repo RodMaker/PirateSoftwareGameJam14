@@ -1,78 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance;
+    public Image actorImage;
+    public TextMeshProUGUI actorName;
+    public TextMeshProUGUI messageText;
+    public RectTransform backgroundBox;
 
-    public Image characterIcon;
-    public TextMeshProUGUI characterName;
-    public TextMeshProUGUI dialogueArea;
+    Message[] currentMessages;
+    Actor[] currentActors;
+    int activeMessage = 0;
+    public static bool isActive = false;
 
-    private Queue<DialogueLine> lines;
+    public void OpenDialogue(Message[] messages, Actor[] actors)
+    {
+        currentMessages = messages;
+        currentActors = actors;
+        activeMessage = 0;
+        isActive = true;
+        Debug.Log("Started conversation! Loaded messages: " + messages.Length);
+        DisplayMessage();
+        backgroundBox.LeanScale(Vector3.one, 0.5f).setEaseInOutExpo();
+    }
 
-    public bool isDialogueActive = false;
+    void DisplayMessage()
+    {
+        Message messageToDisplay = currentMessages[activeMessage];
+        messageText.text = messageToDisplay.message;
 
-    public float typingSpeed = 0.2f;
+        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
+        actorName.text = actorToDisplay.name;
+        actorImage.sprite = actorToDisplay.sprite;
 
-    public Animator animator;
+        AnimateTextColor();
+    }
+
+    public void NextMessage()
+    {
+        activeMessage++;
+        if (activeMessage < currentMessages.Length)
+        {
+            DisplayMessage();
+        }
+        else
+        {
+            Debug.Log("Conversation ended!");
+            backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
+            isActive = false;
+        }
+    }
+
+    void AnimateTextColor()
+    {
+        LeanTween.textAlpha(messageText.rectTransform, 0, 0);
+        LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
+    }
 
     private void Start()
     {
-        if (Instance == null)
-            Instance = this;
+        backgroundBox.transform.localScale = Vector3.zero;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    private void Update()
     {
-        isDialogueActive = true;
-
-        animator.Play("show");
-
-        lines.Clear();
-
-        foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
+        if (Input.GetKeyDown(KeyCode.Space) && isActive == true)
         {
-            lines.Enqueue(dialogueLine);
+            NextMessage();
         }
-
-        DisplayNextDialogueLine();
-    }
-
-    public void DisplayNextDialogueLine()
-    {
-        if (lines.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-
-        DialogueLine currentLine = lines.Dequeue();
-
-        characterIcon.sprite = currentLine.character.icon;
-        characterName.text = currentLine.character.name;
-
-        StopAllCoroutines();
-
-        StartCoroutine(TypeSentence(currentLine));
-    }
-
-    IEnumerator TypeSentence(DialogueLine dialogueLine)
-    {
-        dialogueArea.text = "";
-        foreach (char letter in dialogueLine.line.ToCharArray())
-        {
-            dialogueArea.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-    }
-
-    void EndDialogue()
-    {
-        isDialogueActive = false;
-        animator.Play("hide");
     }
 }
