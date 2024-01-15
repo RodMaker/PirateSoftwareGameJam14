@@ -9927,6 +9927,12 @@ MonoBehaviour:
   - groupID: Toggle
     clips:
     - {fileID: 8300000, guid: dd2221ec3202027459bc845a6bb95a65, type: 3}
+  - groupID: PlayerDeath
+    clips:
+    - {fileID: 8300000, guid: dd2221ec3202027459bc845a6bb95a65, type: 3}
+  - groupID: GameOver
+    clips:
+    - {fileID: 8300000, guid: dd2221ec3202027459bc845a6bb95a65, type: 3}
 --- !u!4 &533834249
 Transform:
   m_ObjectHideFlags: 0

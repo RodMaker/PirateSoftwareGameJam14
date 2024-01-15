@@ -44,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
         {
             SoundManager.Instance.PlaySound3D("EnemyDeath", transform.position);
             Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
+            GetComponent<PickUpSpawner>().DropItems();
             Destroy(gameObject);
         }
     }
