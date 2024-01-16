@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -12,6 +13,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private TrailRenderer myTrailRenderer;
     [SerializeField] private Transform weaponCollider;
+    [SerializeField] private PlayerHealth playerHealth; // ADDED
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -23,6 +25,8 @@ public class PlayerController : Singleton<PlayerController>
 
     private bool facingLeft = false;
     private bool isDashing = false;
+
+    public static event Action<GameObject> OnStart; // ADDED
 
     protected override void Awake()
     {
@@ -40,7 +44,16 @@ public class PlayerController : Singleton<PlayerController>
         playerControls.Combat.Dash.performed += _ => Dash();
 
         startingMoveSpeed = moveSpeed;
+
+        OnStart.Invoke(this.gameObject); // ADDED
+        StartPlayer(); // ADDED
     }
+
+    // ADDED
+    public void StartPlayer() 
+    {
+        playerHealth.StartPlayer();
+    }   
 
     private void OnEnable()
     {

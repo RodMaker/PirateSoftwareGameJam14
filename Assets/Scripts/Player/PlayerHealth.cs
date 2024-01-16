@@ -16,9 +16,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private Flash flash;
     const string HEART_SLIDER_TEXT = "HeartSlider";
 
-    public GameManager gameManager; // ADDED
-    private bool isDead = false; // ADDED
-
     protected override void Awake()
     {
         base.Awake();
@@ -27,14 +24,16 @@ public class PlayerHealth : Singleton<PlayerHealth>
         knockback = GetComponent<Knockback>();
     }
 
-    private void Start()
+    // ADDED
+    public void StartPlayer()
     {
         currentHealth = maxHealth;
 
         UpdateHealthSlider();
 
-        isDead = false; // ADDED
-        gameObject.SetActive(true); // ADDED
+        flash.StartPlayer();
+
+        canTakeDamage = true;
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -81,9 +80,11 @@ public class PlayerHealth : Singleton<PlayerHealth>
             currentHealth = 0;
             Debug.Log("Player Death");
             // ADDED
-            isDead = true;
             SoundManager.Instance.PlaySound3D("PlayerDeath", transform.position);
-            gameManager.GameOver();
+            GameManager.Instance.GameOver();
+            flash.StopAllCoroutines();
+            knockback.StopAllCoroutines();
+            knockback.SetKnockBack(false);
             gameObject.SetActive(false);
         }
     }

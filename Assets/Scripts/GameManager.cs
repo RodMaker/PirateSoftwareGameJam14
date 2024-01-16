@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     public GameObject gameOverUI;
+    private GameObject playerObj;
 
     public void GameOver()
     {
@@ -17,12 +18,16 @@ public class GameManager : MonoBehaviour
     {
         gameOverUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerObj.SetActive(true);
+        playerObj.GetComponent<PlayerController>().StartPlayer();
     }
 
     public void MainMenu()
     {
         gameOverUI.SetActive(false);
         SceneManager.LoadScene("Main Menu");
+        playerObj.SetActive(true);
+        playerObj.GetComponent<PlayerController>().StartPlayer();
     }
 
     public void Quit()
@@ -30,4 +35,9 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void OnEnable() => PlayerController.OnStart += SetPlayer;
+
+    public void OnDestroy() => PlayerController.OnStart -= SetPlayer;
+
+    private void SetPlayer(GameObject player) => playerObj = player;
 }
