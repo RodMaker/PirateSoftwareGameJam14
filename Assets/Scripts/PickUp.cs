@@ -89,8 +89,8 @@ public class PickUp : MonoBehaviour
         switch (pickUpType)
         {
             case PickUpType.GoldCoin:
-                // do goldcoin stuff
                 SoundManager.Instance.PlaySound3D("Pickup", transform.position);
+                EconomyManager.Instance.UpdateCurrentGold();
                 Debug.Log("GoldCoin");
                 break;
             case PickUpType.HealthGlobe:

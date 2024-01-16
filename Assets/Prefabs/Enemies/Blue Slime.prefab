@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4921510852465444132}
   - component: {fileID: 3685076001111940872}
   - component: {fileID: 7754085576012520590}
+  - component: {fileID: 4744909282256926618}
   m_Layer: 0
   m_Name: Blue Slime
   m_TagString: Untagged
@@ -32,13 +33,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3232233232416917116}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &444030940894398803
 SpriteRenderer:
@@ -187,6 +188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ce64c7f3a105c42884ea0358ea1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2673526509697760831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 6693598326321845063, guid: af446ae90572c4d419e447ba13e5d800, type: 3}
+  knockBackThrust: 15
 --- !u!114 &3685076001111940872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,3 +248,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: 405ca94f54c5c1047b50cb2df99c77eb, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &4744909282256926618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232233232416917116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d1526d36614e948a370708306a5816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 8665864511122482029, guid: 49228dd95f49713429266377c950ed62, type: 3}
+  healthGlobe: {fileID: 8665864511122482029, guid: 24161532446bf184ab09409c147da5a3, type: 3}
+  staminaGlobe: {fileID: 8665864511122482029, guid: 5e07b89be5b1aa14fa180e11e7e500b0, type: 3}
