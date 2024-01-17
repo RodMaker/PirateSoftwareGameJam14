@@ -21,4 +21,17 @@ public class EconomyManager : Singleton<EconomyManager>
 
         goldText.text = currentGold.ToString("D3");
     }
+
+    // ADDED
+    public void StartPlayer()
+    {
+        currentGold = 0;
+
+        if (goldText == null)
+        {
+            goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
+        }
+
+        goldText.text = currentGold.ToString("D3");
+    }
 }

@@ -21,6 +21,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         base.Awake();
 
+        Debug.Log($"Hello i was awaken at <color=green>{Time.time}</color>");
+
         flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
     }
@@ -28,6 +30,10 @@ public class PlayerHealth : Singleton<PlayerHealth>
     // ADDED
     public void StartPlayer()
     {
+        ExperienceManager.Instance.OnExperienceChange += HandleExperienceChange;
+
+        maxHealth = 4;
+
         currentHealth = maxHealth;
 
         UpdateHealthSlider();
@@ -116,7 +122,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     // ADDED LEVEL SYSTEM
     private void OnEnable()
     {
-        ExperienceManager.Instance.OnExperienceChange += HandleExperienceChange;
+        
     }
 
     private void OnDisable()
@@ -139,7 +145,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         currentHealth = maxHealth;
         UpdateHealthSlider();
         currentLevel++;
-        currentExperience = 0;
+        currentExperience -= maxExperience;
         maxExperience += 100;
     }
 }

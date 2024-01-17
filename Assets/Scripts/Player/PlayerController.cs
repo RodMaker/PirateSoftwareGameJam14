@@ -14,6 +14,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private TrailRenderer myTrailRenderer;
     [SerializeField] private Transform weaponCollider;
     [SerializeField] private PlayerHealth playerHealth; // ADDED
+    [SerializeField] private EconomyManager economyManager; // ADDED
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -53,6 +54,7 @@ public class PlayerController : Singleton<PlayerController>
     public void StartPlayer() 
     {
         playerHealth.StartPlayer();
+        economyManager.StartPlayer();
     }   
 
     private void OnEnable()
