@@ -8,6 +8,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
+    [SerializeField] private int currentExperience, maxExperience, currentLevel; // ADDED
 
     private Slider heartSlider;
     private int currentHealth;
@@ -34,6 +35,12 @@ public class PlayerHealth : Singleton<PlayerHealth>
         flash.StartPlayer();
 
         canTakeDamage = true;
+
+        currentExperience = 0;
+
+        maxExperience = 300;
+
+        currentLevel = 1;
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -104,5 +111,35 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
         heartSlider.maxValue = maxHealth;
         heartSlider.value = currentHealth;
+    }
+
+    // ADDED LEVEL SYSTEM
+    private void OnEnable()
+    {
+        ExperienceManager.Instance.OnExperienceChange += HandleExperienceChange;
+    }
+
+    private void OnDisable()
+    {
+        ExperienceManager.Instance.OnExperienceChange -= HandleExperienceChange;
+    }
+
+    private void HandleExperienceChange(int newExperience)
+    {
+        currentExperience += newExperience;
+        if (currentExperience >= maxExperience)
+        {
+            LevelUp();
+        }
+    }
+
+    private void LevelUp()
+    {
+        maxHealth += 1;
+        currentHealth = maxHealth;
+        UpdateHealthSlider();
+        currentLevel++;
+        currentExperience = 0;
+        maxExperience += 100;
     }
 }

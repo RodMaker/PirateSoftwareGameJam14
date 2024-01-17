@@ -119,6 +119,9 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Dash()
     {
+        if (DialogueManager.isActive == true)
+            return;
+
         if (!isDashing && Stamina.Instance.CurrentStamina > 0)
         {
             Stamina.Instance.UseStamina();

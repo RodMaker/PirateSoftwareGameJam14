@@ -17,7 +17,8 @@ public class GameManager : Singleton<GameManager>
     public void Restart()
     {
         gameOverUI.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1");
         playerObj.SetActive(true);
         playerObj.GetComponent<PlayerController>().StartPlayer();
     }

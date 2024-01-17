@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int startingHealth = 3;
     [SerializeField] private GameObject deathVFXPrefab;
     [SerializeField] private float knockBackThrust = 15f;
+    [SerializeField] private int expAmount = 100; // ADDED
 
     private int currentHealth;
     private Knockback knockback;
@@ -45,6 +46,7 @@ public class EnemyHealth : MonoBehaviour
             SoundManager.Instance.PlaySound3D("EnemyDeath", transform.position);
             Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             GetComponent<PickUpSpawner>().DropItems();
+            ExperienceManager.Instance.AddExperience(expAmount); // ADDED
             Destroy(gameObject);
         }
     }
