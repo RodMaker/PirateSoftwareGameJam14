@@ -91,17 +91,14 @@ public class PickUp : MonoBehaviour
             case PickUpType.GoldCoin:
                 SoundManager.Instance.PlaySound3D("Pickup", transform.position);
                 EconomyManager.Instance.UpdateCurrentGold();
-                Debug.Log("GoldCoin");
                 break;
             case PickUpType.HealthGlobe:
                 SoundManager.Instance.PlaySound3D("Pickup", transform.position);
                 PlayerHealth.Instance.HealPlayer();
-                Debug.Log("HealthGlobe");
                 break;
             case PickUpType.StaminaGlobe:
-                // do stamina globe stuff
                 SoundManager.Instance.PlaySound3D("Pickup", transform.position);
-                Debug.Log("StaminaGlobe");
+                Stamina.Instance.RefreshStamina();
                 break;
         }
     }
