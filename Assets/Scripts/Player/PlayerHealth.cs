@@ -21,8 +21,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         base.Awake();
 
-        Debug.Log($"Hello i was awaken at <color=green>{Time.time}</color>");
-
         flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
     }

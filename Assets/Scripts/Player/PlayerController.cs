@@ -9,7 +9,8 @@ public class PlayerController : Singleton<PlayerController>
 {
     public bool FacingLeft { get { return facingLeft; } }
 
-    [SerializeField] private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
+
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private TrailRenderer myTrailRenderer;
     [SerializeField] private Transform weaponCollider;
@@ -53,6 +54,7 @@ public class PlayerController : Singleton<PlayerController>
     // ADDED
     public void StartPlayer() 
     {
+        moveSpeed = 4f;
         playerHealth.StartPlayer();
         economyManager.StartPlayer();
     }   
