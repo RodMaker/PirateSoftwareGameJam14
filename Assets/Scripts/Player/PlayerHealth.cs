@@ -146,5 +146,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
         currentLevel++;
         currentExperience -= maxExperience;
         maxExperience += 100;
+        SkillTree.Instance.SkillPoints += 1;
     }
 }

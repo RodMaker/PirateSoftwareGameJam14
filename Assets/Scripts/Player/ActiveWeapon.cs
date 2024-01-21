@@ -11,6 +11,9 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
 
     private bool attackButtonDown, isAttacking = false;
 
+    public int swordDmgUp, bowDmgUp, staffDmgUp;
+    public float swordCDUp, bowCDUp, staffCDUp = .0f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -33,6 +36,7 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
 
     private void Update()
     {
+        Debug.Log($"<color=purple>{CurrentActiveWeapon.gameObject.name}</color>");
         Attack();
     }
 
@@ -58,7 +62,24 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
 
     private IEnumerator TimeBetweenAttacksRoutine()
     {
-        yield return new WaitForSeconds(timeBetweenAttacks);
+        var tmp = timeBetweenAttacks;
+
+        switch (CurrentActiveWeapon.gameObject.name)
+        {
+            case "Sword":
+                tmp -= swordCDUp;
+                break;
+            case "Staff":
+                tmp -= staffCDUp;
+                break;
+            case "Bow":
+                tmp -= bowCDUp;
+                break;
+            default:
+                Debug.LogError("Shit is really fucked up");
+                break;
+        }
+        yield return new WaitForSeconds(tmp);
         isAttacking = false;
     }
 
@@ -74,7 +95,7 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
 
     private void Attack()
     {
-        if (attackButtonDown && !isAttacking && CurrentActiveWeapon)
+        if (attackButtonDown && !isAttacking && CurrentActiveWeapon && !GameManager.Instance.isOnMenu)
         {
             AttackCooldown();
             (CurrentActiveWeapon as IWeapon).Attack();

@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     private GameObject playerObj;
     [SerializeField] private GameObject heartContainer, staminaContainer, goldCoinContainer, activeInventory;
     private bool firstTime = true;
+    public bool isOnMenu = false;
 
     public void GameOver()
     {

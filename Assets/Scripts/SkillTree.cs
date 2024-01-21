@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class SkillTree : MonoBehaviour
+public class SkillTree : Singleton<SkillTree>
 {
+    public int SkillPoints { get => passiveSkillPoints; set => passiveSkillPoints = value; }
+
     [SerializeField] private int passiveSkillPoints;
     [SerializeField] private TMP_Text passiveSkillPointsText;
     [SerializeField] private GameObject skillTree;
@@ -17,8 +19,11 @@ public class SkillTree : MonoBehaviour
 
     private void Start()
     {
-        passiveSkillPoints = 10; // Should be 0, just for testing purposes i am using 10 now
-
+#if UNITY_EDITOR
+        passiveSkillPoints = 10;
+#else
+        passiveSkillPoints = 0;
+#endif
         UpdatePassiveSkillPointsText();
 
         movementSpeedPassiveUnlocked = false;
@@ -36,7 +41,9 @@ public class SkillTree : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
+            GameManager.Instance.isOnMenu = !GameManager.Instance.isOnMenu;
             skillTree.SetActive(!skillTree.activeSelf);
+            UpdatePassiveSkillPointsText();
         }
     }
 
@@ -78,7 +85,7 @@ public class SkillTree : MonoBehaviour
             swordAttackDamagePassiveUnlocked = true;
             passiveSkillPoints -= 1;
             UpdatePassiveSkillPointsText();
-            // Do stuff
+            ActiveWeapon.Instance.swordDmgUp = 2;
             Debug.Log("Passive Unlocked");
         }
     }
@@ -95,7 +102,7 @@ public class SkillTree : MonoBehaviour
             bowAttackDamagePassiveUnlocked = true;
             passiveSkillPoints -= 1;
             UpdatePassiveSkillPointsText();
-            // Do stuff
+            ActiveWeapon.Instance.bowDmgUp = 2;
             Debug.Log("Passive Unlocked");
         }
     }
@@ -112,7 +119,7 @@ public class SkillTree : MonoBehaviour
             staffAttackDamagePassiveUnlocked = true;
             passiveSkillPoints -= 1;
             UpdatePassiveSkillPointsText();
-            // Do stuff
+            ActiveWeapon.Instance.staffDmgUp = 1;
             Debug.Log("Passive Unlocked");
         }
     }
@@ -129,7 +136,7 @@ public class SkillTree : MonoBehaviour
             swordAttackCooldownPassiveUnlocked = true;
             passiveSkillPoints -= 1;
             UpdatePassiveSkillPointsText();
-            // Do stuff
+            ActiveWeapon.Instance.swordCDUp = .2f;
             Debug.Log("Passive Unlocked");
         }
     }
@@ -146,7 +153,7 @@ public class SkillTree : MonoBehaviour
             bowAttackCooldownPassiveUnlocked = true;
             passiveSkillPoints -= 1;
             UpdatePassiveSkillPointsText();
-            // Do stuff
+            ActiveWeapon.Instance.bowCDUp = .2f;
             Debug.Log("Passive Unlocked");
         }
     }
@@ -163,7 +170,7 @@ public class SkillTree : MonoBehaviour
             staffAttackCooldownPassiveUnlocked = true;
             passiveSkillPoints -= 1;
             UpdatePassiveSkillPointsText();
-            // Do stuff
+            ActiveWeapon.Instance.staffCDUp = .2f;
             Debug.Log("Passive Unlocked");
         }
     }
