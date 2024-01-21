@@ -29,7 +29,22 @@ public class GameManager : Singleton<GameManager>
         goldCoinContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Scene1EN");
+        playerObj.SetActive(true);
+        playerObj.transform.position = Vector2.zero;
+        playerObj.GetComponent<PlayerController>().StartPlayer();
+    }
+
+    public void Recomeçar()
+    {
+        firstTime = false;
+        gameOverUI.SetActive(false);
+        heartContainer.SetActive(true);
+        staminaContainer.SetActive(true);
+        goldCoinContainer.SetActive(true);
+        activeInventory.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1PT");
         playerObj.SetActive(true);
         playerObj.transform.position = Vector2.zero;
         playerObj.GetComponent<PlayerController>().StartPlayer();

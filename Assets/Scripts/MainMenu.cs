@@ -7,7 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Scene1EN");
+    }
+
+    public void Jogar()
+    {
+        SceneManager.LoadScene("Scene1PT");
     }
 
     public void Quit()
