@@ -25,11 +25,17 @@ public class BGM : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        audioSource.Play();
+    }
+
     private void Update()
     {
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            audioSource.Pause();
+            //audioSource.Pause();
+            Destroy(gameObject);
         }
 
         /* If I want to change songs
@@ -39,6 +45,7 @@ public class BGM : MonoBehaviour
             audioSource.clip = background1;
             audioSource.Play();
         }
+        
 
         if (SceneManager.GetActiveScene().name == "Scene2")
         {
@@ -47,5 +54,11 @@ public class BGM : MonoBehaviour
             audioSource.Play();
         }
         */
+    }
+
+    public void PauseMusic()
+    { 
+        audioSource.Pause();
+        Destroy(gameObject);
     }
 }

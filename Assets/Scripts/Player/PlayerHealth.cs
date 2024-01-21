@@ -91,6 +91,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
             currentHealth = 0;
             Debug.Log("Player Death");
             // ADDED
+            BGM.Instance.PauseMusic();
             SoundManager.Instance.PlaySound3D("PlayerDeath", transform.position);
             GameManager.Instance.GameOver();
             flash.StopAllCoroutines();
