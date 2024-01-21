@@ -21,7 +21,7 @@ public class DamageSource : MonoBehaviour
         
         switch (ActiveWeapon.Instance.CurrentActiveWeapon.gameObject.name)
         {
-            case "Sword"):
+            case "Sword":
                 enemyHealth?.TakeDamage(damageAmount + ActiveWeapon.Instance.swordDmgUp);
                 break;
             case "Staff":
