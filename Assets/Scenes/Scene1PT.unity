@@ -16972,6 +16972,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1821239080}
+    - target: {fileID: 1412484385802346172, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Dano do ataque de espada
+      objectReference: {fileID: 0}
     - target: {fileID: 1757348592834327207, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16996,10 +17000,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2014759104706963038, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Tempo entre ataques de espada
+      objectReference: {fileID: 0}
     - target: {fileID: 2289394334578616784, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 320813464}
+    - target: {fileID: 3087687049302823364, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Velocidade de movimento
+      objectReference: {fileID: 0}
     - target: {fileID: 3398586258114521884, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17064,6 +17076,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 233404036}
+    - target: {fileID: 4172743325298083503, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Dano do ataque de arco
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246754577277254897, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Tempo entre ataques de arco
+      objectReference: {fileID: 0}
     - target: {fileID: 5204931407639558676, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -17112,6 +17132,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 320813464}
+    - target: {fileID: 6459391898294301874, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Dano do ataque de magia
+      objectReference: {fileID: 0}
     - target: {fileID: 6800910591647279955, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17220,6 +17244,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1821239080}
+    - target: {fileID: 7439731077428774176, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7618813819910820148, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -17235,6 +17263,14 @@ PrefabInstance:
     - target: {fileID: 7710048010820674048, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7795384816528547708, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Pontos passivos
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089343094387588454, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: Tempo entre ataques de magia
       objectReference: {fileID: 0}
     - target: {fileID: 8417498254662783350, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
