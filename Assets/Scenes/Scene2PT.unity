@@ -9592,6 +9592,18 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlaySound2D
       objectReference: {fileID: 0}
+    - target: {fileID: 706894606337128178, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 706894606337128178, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 706894606337128178, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
     - target: {fileID: 707970027992671329, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
