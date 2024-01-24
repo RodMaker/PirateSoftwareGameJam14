@@ -9028,7 +9028,7 @@ GameObject:
   - component: {fileID: 1075897578}
   - component: {fileID: 1075897580}
   m_Layer: 0
-  m_Name: GhostNPC
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9164,8 +9164,7 @@ MonoBehaviour:
   - actorId: 0
     message: I don't have much time left, please listen carefully.
   - actorId: 0
-    message: There is a slime infection spreading on this forest. Only you can stop
-      it!
+    message: There are ghosts spreading on this forest. Only you can stop it!
   - actorId: 1
     message: Say no more, I'm on to it!
   actors:
@@ -17013,6 +17012,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 320813464}
+    - target: {fileID: 3173129166390764781, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_text
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3398586258114521884, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

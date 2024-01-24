@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,10 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private bool canTakeDamage = true;
     private Knockback knockback;
     private Flash flash;
+    private TMP_Text levelText; // ADDED
+
     const string HEART_SLIDER_TEXT = "HeartSlider";
+    const string LEVEL_AMOUNT_TEXT = "LevelAmountText"; // ADDED
 
     protected override void Awake()
     {
@@ -45,6 +49,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
         maxExperience = 300;
 
         currentLevel = 1;
+
+        UpdateCurrentLevel();
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -144,8 +150,19 @@ public class PlayerHealth : Singleton<PlayerHealth>
         currentHealth = maxHealth;
         UpdateHealthSlider();
         currentLevel++;
+        UpdateCurrentLevel();
         currentExperience -= maxExperience;
         maxExperience += 100;
         SkillTree.Instance.SkillPoints += 1;
+    }
+
+    public void UpdateCurrentLevel()
+    {
+        if (levelText == null)
+        {
+            levelText = GameObject.Find(LEVEL_AMOUNT_TEXT).GetComponent<TMP_Text>();
+        }
+
+        levelText.text = currentLevel.ToString();
     }
 }

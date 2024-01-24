@@ -9028,7 +9028,7 @@ GameObject:
   - component: {fileID: 1075897578}
   - component: {fileID: 1075897580}
   m_Layer: 0
-  m_Name: GhostNPC
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9164,7 +9164,7 @@ MonoBehaviour:
   - actorId: 0
     message: "N\xE3o me resta muito tempo, ouve com aten\xE7\xE3o."
   - actorId: 0
-    message: "Est\xE3o a espalhar-se lodos pela floresta. S\xF3 tu os podes parar!"
+    message: "Est\xE3o a espalhar-se fantasmas pela floresta. S\xF3 tu os podes parar!"
   - actorId: 1
     message: "N\xE3o digas mais nada, eu trato disso!"
   actors:
