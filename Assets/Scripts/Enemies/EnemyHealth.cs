@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class EnemyHealth : MonoBehaviour
     private int currentHealth;
     private Knockback knockback;
     private Flash flash;
+
+    public bool isBoss = false; // ADDED
+    public GameObject floatingText;
 
     private void Awake()
     {
@@ -29,6 +33,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         SoundManager.Instance.PlaySound3D("EnemyTakeDamage", transform.position);
         knockback.GetKnockedBack(PlayerController.Instance.transform, knockBackThrust);
+        GameObject text = Instantiate(floatingText, transform.position, Quaternion.identity) as GameObject; // ADDED
+        text.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + damage.ToString(); // ADDED
         StartCoroutine(flash.FlashRoutine());
         StartCoroutine(CheckDetectDeathRoutine());
     }
@@ -47,6 +53,12 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             GetComponent<PickUpSpawner>().DropItems();
             ExperienceManager.Instance.AddExperience(expAmount); // ADDED
+
+            if (isBoss)
+            {
+                SceneManager.LoadScene("Credits");
+            }
+            
             Destroy(gameObject);
         }
     }

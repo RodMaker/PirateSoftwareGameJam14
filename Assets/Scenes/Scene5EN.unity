@@ -23107,6 +23107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1368885032}
     m_Modifications:
+    - target: {fileID: 1741356598083563446, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
+      propertyPath: attackRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3892311932075478719, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -23168,6 +23172,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9006815364145988332, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006815364145988332, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
+      propertyPath: expAmount
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006815364145988332, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
       propertyPath: startingHealth
       value: 9
       objectReference: {fileID: 0}
@@ -23177,7 +23189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9174075504622313696, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
       propertyPath: restTime
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9174075504622313696, guid: 809a708e28ff62047994bb49d26d76fa, type: 3}
       propertyPath: oscillate

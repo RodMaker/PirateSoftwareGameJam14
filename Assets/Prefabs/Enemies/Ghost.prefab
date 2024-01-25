@@ -287,6 +287,9 @@ MonoBehaviour:
   startingHealth: 3
   deathVFXPrefab: {fileID: 6693598326321845063, guid: 5e9c1902387522048a1add3d766a102d, type: 3}
   knockBackThrust: 15
+  expAmount: 100
+  isBoss: 0
+  floatingText: {fileID: 4672702060238103773, guid: 34318333b89b8784686c1c580280f352, type: 3}
 --- !u!114 &7349048661900609581
 MonoBehaviour:
   m_ObjectHideFlags: 0

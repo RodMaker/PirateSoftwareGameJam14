@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a72960ccbf04b7843883620546cd63f4, type: 3}
-  m_Name: Staff
+  m_Name: Bow_DefaultValues
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 65863653654151299, guid: fd822efb1cb9a1f43b5a71cec620730b, type: 3}
-  weaponCooldown: 1.2
-  weaponDamage: 2
-  weaponRange: 4
+  weaponPrefab: {fileID: 5960802082855875753, guid: c5cdebfd69f33cd4cb028fd23795d777, type: 3}
+  weaponCooldown: 0.7
+  weaponDamage: 1
+  weaponRange: 12

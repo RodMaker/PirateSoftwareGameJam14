@@ -21220,6 +21220,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3801723642491034395, guid: 42a7f85b48cf21440b6b9b98143a6a22, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7777777
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801723642491034395, guid: 42a7f85b48cf21440b6b9b98143a6a22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63999
+      objectReference: {fileID: 0}
     - target: {fileID: 4023132071460621546, guid: 42a7f85b48cf21440b6b9b98143a6a22, type: 3}
       propertyPath: m_Follow
       value: 
@@ -21227,6 +21235,14 @@ PrefabInstance:
     - target: {fileID: 5838235518845217764, guid: 42a7f85b48cf21440b6b9b98143a6a22, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765868081243825177, guid: 42a7f85b48cf21440b6b9b98143a6a22, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.7060966
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765868081243825177, guid: 42a7f85b48cf21440b6b9b98143a6a22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9579847
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21316,11 +21332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000678321036690203, guid: 6f1f373824c7c344aa2c873ae49827ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.36
       objectReference: {fileID: 0}
     - target: {fileID: 2000678321036690203, guid: 6f1f373824c7c344aa2c873ae49827ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 2000678321036690203, guid: 6f1f373824c7c344aa2c873ae49827ec, type: 3}
       propertyPath: m_LocalPosition.z

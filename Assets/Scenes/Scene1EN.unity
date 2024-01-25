@@ -9268,6 +9268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4921510852465444132, guid: 29da97c26d6e2464da7960d19c591f74, type: 3}
+      propertyPath: floatingText
+      value: 
+      objectReference: {fileID: 4672702060238103773, guid: 34318333b89b8784686c1c580280f352, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17726,6 +17730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 4921510852465444132, guid: 29da97c26d6e2464da7960d19c591f74, type: 3}
+      propertyPath: floatingText
+      value: 
+      objectReference: {fileID: 4672702060238103773, guid: 34318333b89b8784686c1c580280f352, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
