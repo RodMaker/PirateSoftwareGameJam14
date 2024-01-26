@@ -21,6 +21,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     const string HEART_SLIDER_TEXT = "HeartSlider";
     const string LEVEL_AMOUNT_TEXT = "LevelAmountText"; // ADDED
 
+    public GameObject floatingText; // ADDED
+
     protected override void Awake()
     {
         base.Awake();
@@ -151,6 +153,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
         UpdateHealthSlider();
         currentLevel++;
         UpdateCurrentLevel();
+        GameObject text = Instantiate(floatingText, transform.position, Quaternion.identity) as GameObject; // ADDED
+        text.transform.GetChild(0).GetComponent<TextMesh>().text = "Level Up"; // ADDED
         currentExperience -= maxExperience;
         maxExperience += 100;
         SkillTree.Instance.SkillPoints += 1;

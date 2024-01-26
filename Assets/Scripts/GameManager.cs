@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
 {
     public GameObject gameOverUI;
     private GameObject playerObj;
-    [SerializeField] private GameObject heartContainer, staminaContainer, goldCoinContainer, levelContainer, activeInventory;
+    [SerializeField] private GameObject heartContainer, staminaContainer, goldCoinContainer, levelContainer, passiveContainer, activeInventory;
     private bool firstTime = true;
     public bool isOnMenu = false;
 
@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(false);
         goldCoinContainer.SetActive(false);
         levelContainer.SetActive(false);
+        passiveContainer.SetActive(false);
         activeInventory.SetActive(false);
         Debug.Log("Game Over");
     }
@@ -30,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
         levelContainer.SetActive(true);
+        passiveContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1ENEasy");
@@ -46,6 +48,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
         levelContainer.SetActive(true);
+        passiveContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1ENMedium");
@@ -62,6 +65,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
         levelContainer.SetActive(true);
+        passiveContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1ENHard");
@@ -78,6 +82,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
         levelContainer.SetActive(true);
+        passiveContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1PTEasy");
@@ -94,6 +99,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
         levelContainer.SetActive(true);
+        passiveContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1PTMedium");
@@ -110,6 +116,7 @@ public class GameManager : Singleton<GameManager>
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
         levelContainer.SetActive(true);
+        passiveContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1PTHard");
@@ -142,12 +149,15 @@ public class GameManager : Singleton<GameManager>
     private void GetPlayer(GameObject player) => playerObj = player;
     private void SetPlayer(Scene scene, LoadSceneMode mode)
     {
-        if (!firstTime && scene.buildIndex == 1)
+        if (!firstTime && scene.buildIndex == 1 || !firstTime && scene.buildIndex == 2 || !firstTime && scene.buildIndex == 3 ||
+            !firstTime && scene.buildIndex == 4 || !firstTime && scene.buildIndex == 5 || !firstTime && scene.buildIndex == 6)
         {
             playerObj.SetActive(true);
             heartContainer.SetActive(true);
             staminaContainer.SetActive(true);
             goldCoinContainer.SetActive(true);
+            levelContainer.SetActive(true);
+            passiveContainer.SetActive(true);
             activeInventory.SetActive(true);
         }
     }

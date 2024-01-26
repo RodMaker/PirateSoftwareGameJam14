@@ -8803,6 +8803,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4902815017586518258, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
   m_PrefabInstance: {fileID: 483546149260035174}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &949442336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7037321947792465399, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+  m_PrefabInstance: {fileID: 483546149260035174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950634072
 GameObject:
   m_ObjectHideFlags: 0
@@ -22628,6 +22633,10 @@ PrefabInstance:
       propertyPath: activeInventory
       value: 
       objectReference: {fileID: 483546149260035175}
+    - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
+      propertyPath: passiveContainer
+      value: 
+      objectReference: {fileID: 949442336}
     - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
       propertyPath: staminaContainer
       value: 

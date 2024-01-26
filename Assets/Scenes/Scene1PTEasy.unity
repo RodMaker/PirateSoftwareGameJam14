@@ -8393,6 +8393,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 790c986525b383d4c8b3644506e89365, type: 3}
+--- !u!1 &336321567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7037321947792465399, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+  m_PrefabInstance: {fileID: 483546149260035174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &378186417 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1927700465263067287, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
@@ -22640,6 +22645,10 @@ PrefabInstance:
       propertyPath: activeInventory
       value: 
       objectReference: {fileID: 483546149260035175}
+    - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
+      propertyPath: passiveContainer
+      value: 
+      objectReference: {fileID: 336321567}
     - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
       propertyPath: staminaContainer
       value: 

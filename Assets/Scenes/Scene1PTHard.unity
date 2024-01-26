@@ -16573,6 +16573,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5744536046111995400, guid: e20885b641d7d6240a7afc8ba0af9cd5, type: 3}
   m_PrefabInstance: {fileID: 1508826710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1626709196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7037321947792465399, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+  m_PrefabInstance: {fileID: 483546149260035174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1676654978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7475166294170948072, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
@@ -22640,6 +22645,10 @@ PrefabInstance:
       propertyPath: activeInventory
       value: 
       objectReference: {fileID: 483546149260035175}
+    - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
+      propertyPath: passiveContainer
+      value: 
+      objectReference: {fileID: 1626709196}
     - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
       propertyPath: staminaContainer
       value: 

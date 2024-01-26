@@ -16917,6 +16917,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5744536046111995400, guid: 41da55783f8af3440a76a205a3e014fa, type: 3}
   m_PrefabInstance: {fileID: 1979984662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2087488947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7037321947792465399, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+  m_PrefabInstance: {fileID: 483546149260035174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483546149260035174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17141,6 +17146,54 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 320813464}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 233404036}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 233404036}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound2D
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound2D
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Hover
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192884121937721247, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6800910591647279955, guid: b3f4e6943aabcf34f839697b8f0b05e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22628,6 +22681,10 @@ PrefabInstance:
       propertyPath: activeInventory
       value: 
       objectReference: {fileID: 483546149260035175}
+    - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
+      propertyPath: passiveContainer
+      value: 
+      objectReference: {fileID: 2087488947}
     - target: {fileID: 1957176687611616311, guid: 191cae288e004ec45b46a1480db4098b, type: 3}
       propertyPath: staminaContainer
       value: 

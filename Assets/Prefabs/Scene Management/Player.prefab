@@ -325,6 +325,7 @@ MonoBehaviour:
   myTrailRenderer: {fileID: 6266391354496571877}
   weaponCollider: {fileID: 105662818857349571}
   playerHealth: {fileID: 957202217143273262}
+  economyManager: {fileID: 0}
 --- !u!95 &9156016923247681971
 Animator:
   serializedVersion: 5
@@ -408,6 +409,10 @@ MonoBehaviour:
   maxHealth: 4
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
+  floatingText: {fileID: 4672702060238103773, guid: 34318333b89b8784686c1c580280f352, type: 3}
 --- !u!114 &2299577965136386225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +501,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478b91b95c35ca8408a1459ac2461512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordDmgUp: 0
+  bowDmgUp: 0
+  staffDmgUp: 0
+  swordCDUp: 0
+  bowCDUp: 0
+  staffCDUp: 0
 --- !u!114 &5006704769000923067
 MonoBehaviour:
   m_ObjectHideFlags: 0
