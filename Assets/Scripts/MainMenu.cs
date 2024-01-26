@@ -5,14 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Play()
+    public void PlayEasy()
     {
-        SceneManager.LoadScene("Scene1EN");
+        SceneManager.LoadScene("Scene1ENEasy");
     }
 
-    public void Jogar()
+    public void PlayMedium()
     {
-        SceneManager.LoadScene("Scene1PT");
+        SceneManager.LoadScene("Scene1ENMedium");
+    }
+
+    public void PlayHard()
+    {
+        SceneManager.LoadScene("Scene1ENHard");
+    }
+
+    public void JogarFácil()
+    {
+        SceneManager.LoadScene("Scene1PTEasy");
+    }
+
+    public void JogarMédio()
+    {
+        SceneManager.LoadScene("Scene1PTMedium");
+    }
+
+    public void JogarDifícil()
+    {
+        SceneManager.LoadScene("Scene1PTHard");
     }
 
     public void Quit()

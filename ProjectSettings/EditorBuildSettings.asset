@@ -9,35 +9,95 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 212f9c64290eab54c99453f209edacb0
   - enabled: 1
-    path: Assets/Scenes/Scene1EN.unity
-    guid: 85d3e2fa4d98e064c937d329fba85de8
+    path: Assets/Scenes/Scene1ENEasy.unity
+    guid: e9dc0f2a54af0da4a884b91a454aac48
   - enabled: 1
-    path: Assets/Scenes/Scene1PT.unity
+    path: Assets/Scenes/Scene1ENMedium.unity
+    guid: 65d43969419d51746b9dbcebfaba7de2
+  - enabled: 1
+    path: Assets/Scenes/Scene1ENHard.unity
+    guid: aa45a7f309f079c4eb02e00d17ff314e
+  - enabled: 1
+    path: Assets/Scenes/Scene1PTEasy.unity
     guid: faaddde665fe82d46b9880845226aae3
   - enabled: 1
-    path: Assets/Scenes/Scene2EN.unity
-    guid: 35c700f8272ea9f44af20c45dc00d1f7
+    path: Assets/Scenes/Scene1PTMedium.unity
+    guid: 44bab588224f4834091ee6bad32f3f5e
   - enabled: 1
-    path: Assets/Scenes/Scene2PT.unity
+    path: Assets/Scenes/Scene1PTHard.unity
+    guid: 350d2d36341d44d4daced5339735820c
+  - enabled: 1
+    path: Assets/Scenes/Scene2ENEasy.unity
+    guid: 6edda7059a29e1f43b3069436535ec9e
+  - enabled: 1
+    path: Assets/Scenes/Scene2ENMedium.unity
+    guid: b6037442bedfeca4ea51565b9a6b398e
+  - enabled: 1
+    path: Assets/Scenes/Scene2ENHard.unity
+    guid: 2141dd97ed6db09478c19b31be397b29
+  - enabled: 1
+    path: Assets/Scenes/Scene2PTEasy.unity
     guid: 1184d60286f09f44f9704e5fc7452a32
   - enabled: 1
-    path: Assets/Scenes/Scene3EN.unity
-    guid: 67072ee96b903fa42a29aa5b42b335c0
+    path: Assets/Scenes/Scene2PTMedium.unity
+    guid: b65da7ac4af6e38488f3cd36e500328d
   - enabled: 1
-    path: Assets/Scenes/Scene3PT.unity
+    path: Assets/Scenes/Scene2PTHard.unity
+    guid: 7a9bcb8cf1ef96544bdd417f8e300549
+  - enabled: 1
+    path: Assets/Scenes/Scene3ENEasy.unity
+    guid: 03d5240e2b132104db532a9b581ec316
+  - enabled: 1
+    path: Assets/Scenes/Scene3ENMedium.unity
+    guid: 69b9985760cdb0f4c888203336b025d3
+  - enabled: 1
+    path: Assets/Scenes/Scene3ENHard.unity
+    guid: 19ca1a647dc8ae64fbaa790e74b50d36
+  - enabled: 1
+    path: Assets/Scenes/Scene3PTEasy.unity
     guid: 2f4db81542d9c9f4d92328823e1dba35
   - enabled: 1
-    path: Assets/Scenes/Scene4EN.unity
+    path: Assets/Scenes/Scene3PTMedium.unity
+    guid: 6e353adc18771d14380adbf9b482be1a
+  - enabled: 1
+    path: Assets/Scenes/Scene3PTHard.unity
+    guid: 01cc87126966bfb458caaf29b73d46f1
+  - enabled: 1
+    path: Assets/Scenes/Scene4ENEasy.unity
     guid: 9c2a0793d08a42a47a5f0292940011b6
   - enabled: 1
-    path: Assets/Scenes/Scene4PT.unity
+    path: Assets/Scenes/Scene4ENMedium.unity
+    guid: 81bccf61a1a372d448bc5b8b746687be
+  - enabled: 1
+    path: Assets/Scenes/Scene4ENHard.unity
+    guid: 543453172e92da14d8ca4711a0ca45e7
+  - enabled: 1
+    path: Assets/Scenes/Scene4PTEasy.unity
     guid: 413e692112ac342478acdae6668bca2e
   - enabled: 1
-    path: Assets/Scenes/Scene5EN.unity
+    path: Assets/Scenes/Scene4PTMedium.unity
+    guid: 6a0ab1e1797a4e3448e3b3c2eb275f77
+  - enabled: 1
+    path: Assets/Scenes/Scene4PTHard.unity
+    guid: e73fe66b8076d4542a00119faf949fe4
+  - enabled: 1
+    path: Assets/Scenes/Scene5ENEasy.unity
     guid: 4585c37e5deacc44cbc2aef14af86956
   - enabled: 1
-    path: Assets/Scenes/Scene5PT.unity
+    path: Assets/Scenes/Scene5ENMedium.unity
+    guid: 67aafaafa9a58ad40997fcda421dcf36
+  - enabled: 1
+    path: Assets/Scenes/Scene5ENHard.unity
+    guid: 73712d4458aac304e8162a0ea571acec
+  - enabled: 1
+    path: Assets/Scenes/Scene5PTEasy.unity
     guid: 9159aed0b9f97d74c9fcd07d9a3922e9
+  - enabled: 1
+    path: Assets/Scenes/Scene5PTMedium.unity
+    guid: 9781bed4c82c3ac4abe5359499099237
+  - enabled: 1
+    path: Assets/Scenes/Scene5PTHard.unity
+    guid: 5f86c7c9f6393a84f9f2dfa123400713
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 04b42e86c93aaf54abb0eba03943f686

@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
 {
     public GameObject gameOverUI;
     private GameObject playerObj;
-    [SerializeField] private GameObject heartContainer, staminaContainer, goldCoinContainer, activeInventory;
+    [SerializeField] private GameObject heartContainer, staminaContainer, goldCoinContainer, levelContainer, activeInventory;
     private bool firstTime = true;
     public bool isOnMenu = false;
 
@@ -17,35 +17,102 @@ public class GameManager : Singleton<GameManager>
         heartContainer.SetActive(false);
         staminaContainer.SetActive(false);
         goldCoinContainer.SetActive(false);
+        levelContainer.SetActive(false);
         activeInventory.SetActive(false);
         Debug.Log("Game Over");
     }
 
-    public void Restart()
+    public void RestartEasy()
     {
         firstTime = false;
         gameOverUI.SetActive(false);
         heartContainer.SetActive(true);
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
+        levelContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("Scene1EN");
+        SceneManager.LoadScene("Scene1ENEasy");
         playerObj.SetActive(true);
         playerObj.transform.position = Vector2.zero;
         playerObj.GetComponent<PlayerController>().StartPlayer();
     }
 
-    public void Recomeçar()
+    public void RestartMedium()
     {
         firstTime = false;
         gameOverUI.SetActive(false);
         heartContainer.SetActive(true);
         staminaContainer.SetActive(true);
         goldCoinContainer.SetActive(true);
+        levelContainer.SetActive(true);
         activeInventory.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("Scene1PT");
+        SceneManager.LoadScene("Scene1ENMedium");
+        playerObj.SetActive(true);
+        playerObj.transform.position = Vector2.zero;
+        playerObj.GetComponent<PlayerController>().StartPlayer();
+    }
+
+    public void RestartHard()
+    {
+        firstTime = false;
+        gameOverUI.SetActive(false);
+        heartContainer.SetActive(true);
+        staminaContainer.SetActive(true);
+        goldCoinContainer.SetActive(true);
+        levelContainer.SetActive(true);
+        activeInventory.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1ENHard");
+        playerObj.SetActive(true);
+        playerObj.transform.position = Vector2.zero;
+        playerObj.GetComponent<PlayerController>().StartPlayer();
+    }
+
+    public void RecomeçarFácil()
+    {
+        firstTime = false;
+        gameOverUI.SetActive(false);
+        heartContainer.SetActive(true);
+        staminaContainer.SetActive(true);
+        goldCoinContainer.SetActive(true);
+        levelContainer.SetActive(true);
+        activeInventory.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1PTEasy");
+        playerObj.SetActive(true);
+        playerObj.transform.position = Vector2.zero;
+        playerObj.GetComponent<PlayerController>().StartPlayer();
+    }
+
+    public void RecomeçarMédio()
+    {
+        firstTime = false;
+        gameOverUI.SetActive(false);
+        heartContainer.SetActive(true);
+        staminaContainer.SetActive(true);
+        goldCoinContainer.SetActive(true);
+        levelContainer.SetActive(true);
+        activeInventory.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1PTMedium");
+        playerObj.SetActive(true);
+        playerObj.transform.position = Vector2.zero;
+        playerObj.GetComponent<PlayerController>().StartPlayer();
+    }
+
+    public void RecomeçarDifícil()
+    {
+        firstTime = false;
+        gameOverUI.SetActive(false);
+        heartContainer.SetActive(true);
+        staminaContainer.SetActive(true);
+        goldCoinContainer.SetActive(true);
+        levelContainer.SetActive(true);
+        activeInventory.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1PTHard");
         playerObj.SetActive(true);
         playerObj.transform.position = Vector2.zero;
         playerObj.GetComponent<PlayerController>().StartPlayer();
